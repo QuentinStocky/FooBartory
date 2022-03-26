@@ -15,7 +15,6 @@ export default function RobotAction(props:IRobotActionProps) {
   const { createResource, switchResource, factory } = React.useContext(FoobartoryContext)
   // Je regarde si les conditions sont remplies pour miner du fooBar, et par conséquent bloquer ou non le minage
   const canMineFoobar = robot.activity !== ActivityRobot.foobar ? true : robot.activity === ActivityRobot.foobar && (factory.resources.foo > 0 && factory.resources.bar > 0)
-
   return (
     <>
       <Select defaultValue={ActivityRobot.foo} onChange={(event)=> switchResource({activity: event.target.value as ActivityRobot, robot})} sx={{marginRight: '5px'}}>

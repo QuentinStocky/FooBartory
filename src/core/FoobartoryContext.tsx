@@ -55,12 +55,12 @@ const initialState: IState = {
     factory: {
       robots: [
         {
-          id: id ,
-          name: 'Oss',
+          id,
+          name: 'Stock',
           activity: ActivityRobot.foo
         },
       {
-        id: id + 1,
+        id: ++id,
         name: 'Oss',
         activity: ActivityRobot.bar
       }
@@ -95,7 +95,7 @@ const reducer = (state: IState, action: ReducerAction) => {
             robots: [
               ...state.factory.robots,
               {
-                id: id++,
+                id: ++id,
                 name: action.robot.name,
                 activity: action.robot.activity
             }]
@@ -142,7 +142,7 @@ const reducer = (state: IState, action: ReducerAction) => {
               robots: state.factory.robots.map((robotStored: IRobot) => {
                 if(robotStored.id === robot.id) {
                   return {
-                    ...robot,
+                    ...robotStored,
                     activity
                   }
                 } else return robotStored
