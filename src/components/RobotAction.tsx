@@ -1,7 +1,7 @@
 import * as React from 'react';
-import FoobartoryContext, { IRobot } from '../core/FoobartoryContext';
+import FoobartoryContext from '../core/FoobartoryContext';
 import { Button, MenuItem, Select } from '@mui/material';
-import { ActivityRobot } from "../ts";
+import { ActivityRobot, IRobot } from "../ts";
 
 interface IRobotActionProps {
   robot: IRobot

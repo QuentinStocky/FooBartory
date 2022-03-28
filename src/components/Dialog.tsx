@@ -127,7 +127,7 @@ export default function AddRobotDialog(props: DialogProps) {
                       >
                         <MenuItem value='foo'>Foo</MenuItem>
                         <MenuItem value='bar'>Bar</MenuItem>
-                          <MenuItem value='foobar'>Foobar</MenuItem>
+                        <MenuItem value='foobar'>Foobar</MenuItem>
                       </Select>
 
                     </>

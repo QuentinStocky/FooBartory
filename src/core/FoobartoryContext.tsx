@@ -1,11 +1,6 @@
 import React from "react";
-import { ActivityRobot } from "../ts";
+import { ActivityRobot, IRobot } from "../ts";
 
-export interface IRobot {
-    name: string;
-    activity: ActivityRobot;
-    id?: number;
-}
 
 interface IResources {
   foo: number;
@@ -49,7 +44,6 @@ interface IContextState {
   createResource: (resource: ActivityRobot ) => void;
   switchResource: (payload: SwitchResourcePayload) => void
 }
-
 let id = 0
 const initialState: IState = {
     factory: {
